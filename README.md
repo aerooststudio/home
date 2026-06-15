@@ -2,8 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <meta name="description" content="AEROOST STUDIO | توسعه بازی و نرم‌افزار با هوش مصنوعی">
-    <title>AEROOST STUDIO | استودیوی خلاق دیجیتال</title>
+    <meta name="description" content="AEROOST STUDIO">
+    <title>AEROOST STUDIO</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -22,7 +22,10 @@
             transition: background-color 0.4s ease, color 0.3s ease;
             line-height: 1.6;
             width: 100%;
+            min-height: 100vh;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         /* ========== رنگ‌های لوگو ========== */
@@ -92,10 +95,12 @@
         .scale-in { opacity: 0; transform: scale(0.9); transition: all 0.6s ease; }
         .scale-in.visible { opacity: 1; transform: scale(1); }
 
-        /* ========== هدر ========== */
+        /* ========== هدر - کاملاً در مرکز ========== */
         .header {
             position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
             width: 100%;
             z-index: 1000;
             background: var(--bg-header);
@@ -108,12 +113,15 @@
 
         .container {
             max-width: 1400px;
-            width: 100%;
+            width: 90%;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0;
         }
 
         .header-inner {
+            max-width: 1400px;
+            width: 90%;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -197,6 +205,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
+            justify-content: center;
             padding-top: 5rem;
             background: var(--bg);
         }
@@ -325,7 +334,7 @@
             animation: float 5s ease-in-out infinite;
         }
 
-        /* ========== بخش‌ها ========== */
+        /* ========== بخش‌ها - همه در مرکز ========== */
         .section {
             padding: 4rem 0;
         }
@@ -583,12 +592,14 @@
             gap: 0.8rem;
         }
 
+        /* فوتر - کاملاً در مرکز */
         footer {
             text-align: center;
             padding: 2.5rem;
             border-top: 1px solid var(--border);
             color: var(--text-muted);
             font-size: 0.8rem;
+            width: 100%;
         }
         .footer-links {
             display: flex;
@@ -662,7 +673,8 @@
         @media (max-width: 700px) {
             .grid-3 { grid-template-columns: 1fr; }
             .grid-4 { grid-template-columns: 1fr; }
-            .container { padding: 0 1rem; }
+            .container { width: 92%; }
+            .header-inner { width: 92%; }
             .logo img { height: 55px; }
             .hero-image i { font-size: 4.5rem; }
             .products-showcase { flex-direction: column; text-align: center; }
@@ -673,7 +685,7 @@
 </head>
 <body class="light">
     <header class="header">
-        <div class="container header-inner">
+        <div class="header-inner">
             <div class="logo">
                 <img src="image.png" alt="AEROOST STUDIO Logo" onerror="this.style.display='none';">
                 <div class="logo-text">
