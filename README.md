@@ -1,7 +1,7 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <meta name="description" content="AEROOST STUDIO | توسعه بازی و نرم‌افزار با هوش مصنوعی">
     <title>AEROOST STUDIO | استودیوی خلاق دیجیتال</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -21,6 +21,8 @@
             font-family: 'Vazirmatn', 'Inter', sans-serif;
             transition: background-color 0.4s ease, color 0.3s ease;
             line-height: 1.6;
+            width: 100%;
+            overflow-x: hidden;
         }
 
         /* ========== رنگ‌های لوگو ========== */
@@ -105,9 +107,10 @@
         .header.scrolled { padding: 0.7rem 0; }
 
         .container {
-            max-width: 1280px;
+            max-width: 1400px;
+            width: 100%;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
         }
 
         .header-inner {
@@ -125,7 +128,7 @@
             gap: 1rem;
         }
         .logo img {
-            height: 110px;
+            height: 90px;
             width: auto;
             border-radius: 16px;
             transition: transform 0.3s;
@@ -134,7 +137,7 @@
             transform: scale(1.03);
         }
         .logo-text .main {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 800;
             background: var(--silver);
             -webkit-background-clip: text;
@@ -142,7 +145,7 @@
             color: transparent;
         }
         .logo-text .sub {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: #9CA3AF;
         }
 
@@ -152,7 +155,7 @@
             flex-wrap: wrap;
         }
         .nav-link {
-            padding: 0.55rem 1.3rem;
+            padding: 0.5rem 1.2rem;
             font-size: 0.85rem;
             font-weight: 500;
             color: var(--text-muted);
@@ -200,7 +203,7 @@
         .hero-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
         }
         .hero-badge {
@@ -216,7 +219,7 @@
             animation: pulse 2s infinite;
         }
         .hero h1 {
-            font-size: 4rem;
+            font-size: 3.8rem;
             font-weight: 800;
             line-height: 1.1;
             margin-bottom: 1.2rem;
@@ -249,10 +252,10 @@
         .btn-primary {
             background: var(--gradient);
             color: #0A0A0A;
-            padding: 1rem 2.2rem;
+            padding: 0.9rem 2rem;
             border-radius: 3rem;
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
@@ -280,10 +283,10 @@
             border: 1.5px solid var(--border);
             background: transparent;
             color: var(--text);
-            padding: 1rem 2.2rem;
+            padding: 0.9rem 2rem;
             border-radius: 3rem;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
@@ -295,10 +298,11 @@
         
         .hero-stats {
             display: flex;
-            gap: 3rem;
+            gap: 2.5rem;
+            flex-wrap: wrap;
         }
         .hero-stats div h4 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 800;
             background: var(--gradient);
             -webkit-background-clip: text;
@@ -306,11 +310,11 @@
             color: transparent;
         }
         .hero-stats div p {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
         }
         .hero-image i {
-            font-size: 10rem;
+            font-size: 9rem;
             background: var(--gradient);
             -webkit-background-clip: text;
             background-clip: text;
@@ -320,12 +324,12 @@
 
         /* ========== بخش‌ها ========== */
         .section {
-            padding: 5rem 0;
+            padding: 4rem 0;
         }
         .section-title {
             font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
             position: relative;
         }
         .section-title::after {
@@ -339,19 +343,28 @@
             border-radius: 3px;
         }
 
-        .grid-3, .grid-4, .grid-2 {
+        /* گریدهای اصلاح شده برای نمایش 3 تایی در صفحه‌های بزرگ */
+        .grid-3 {
             display: grid;
-            gap: 1.8rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
         }
-        .grid-3 { grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); }
-        .grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-        .grid-2 { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
 
         /* کارت‌ها */
         .card, .project-card, .skill-card, .faq-card, .blog-card {
             background: var(--bg-card);
             border-radius: 1.5rem;
-            padding: 2rem;
+            padding: 1.8rem;
             border: 1px solid var(--border);
             transition: all 0.4s cubic-bezier(0.2,0.9,0.4,1.1);
             box-shadow: var(--shadow);
@@ -362,7 +375,7 @@
             border-color: var(--cyan);
         }
         .card-icon {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             background: var(--gradient);
             -webkit-background-clip: text;
             background-clip: text;
@@ -370,16 +383,16 @@
             margin-bottom: 1rem;
         }
         .card h3, .blog-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
         }
         .card p, .blog-card p {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             line-height: 1.7;
         }
         .blog-meta {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             color: var(--cyan);
             margin-top: 1rem;
             display: flex;
@@ -391,17 +404,17 @@
             color: var(--cyan);
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             transition: 0.2s;
         }
         .read-more:hover { transform: translateX(-5px); display: inline-block; }
 
         .project-status {
             display: inline-block;
-            font-size: 0.7rem;
-            padding: 0.25rem 1rem;
+            font-size: 0.65rem;
+            padding: 0.2rem 0.8rem;
             border-radius: 2rem;
-            margin-top: 1rem;
+            margin-top: 0.8rem;
         }
         .status-done {
             background: rgba(46,193,222,0.15);
@@ -416,18 +429,19 @@
 
         .skill-card {
             text-align: center;
+            padding: 1.5rem;
         }
         .skill-card i {
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             background: var(--gradient);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             display: inline-block;
         }
-        .skill-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
-        .skill-card p { font-size: 0.8rem; color: var(--text-muted); }
+        .skill-card h3 { font-size: 1rem; margin-bottom: 0.3rem; }
+        .skill-card p { font-size: 0.75rem; color: var(--text-muted); }
 
         /* فرآیند کاری */
         .process-steps {
@@ -439,7 +453,7 @@
         .process-step {
             flex: 1;
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem;
             background: var(--bg-card);
             border-radius: 1.5rem;
             border: 1px solid var(--border);
@@ -450,41 +464,41 @@
             border-color: var(--cyan);
         }
         .step-number {
-            width: 55px;
-            height: 55px;
+            width: 50px;
+            height: 50px;
             background: var(--gradient);
             color: #0A0A0A;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 1.4rem;
+            margin: 0 auto 0.8rem;
+            font-size: 1.3rem;
             font-weight: 800;
         }
-        .process-step h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-        .process-step p { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+        .process-step h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .process-step p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
 
         .products-showcase {
             background: var(--bg-card);
             border-radius: 1.5rem;
-            padding: 2.5rem;
+            padding: 2rem;
             border: 1px solid var(--border);
             display: flex;
             flex-wrap: wrap;
-            gap: 2rem;
+            gap: 1.5rem;
             justify-content: space-between;
             align-items: center;
         }
         .products-showcase .badge {
             background: var(--gradient);
             color: #0A0A0A;
-            padding: 0.2rem 1rem;
+            padding: 0.2rem 0.8rem;
             border-radius: 2rem;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 700;
             display: inline-block;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         .faq-item {
@@ -499,25 +513,26 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 1.5rem;
+            padding: 1rem 1.2rem;
             cursor: pointer;
             font-weight: 700;
+            font-size: 0.9rem;
             transition: 0.2s;
         }
         .faq-question:hover { background: rgba(46,193,222,0.05); }
         .faq-question i { color: var(--cyan); transition: transform 0.3s; }
         .faq-answer {
             max-height: 0;
-            padding: 0 1.5rem;
+            padding: 0 1.2rem;
             overflow: hidden;
             transition: max-height 0.3s ease, padding 0.3s ease;
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             line-height: 1.7;
         }
         .faq-item.active .faq-answer {
             max-height: 200px;
-            padding: 0 1.5rem 1.2rem 1.5rem;
+            padding: 0 1.2rem 1rem 1.2rem;
         }
         .faq-item.active .faq-question i { transform: rotate(180deg); }
 
@@ -526,7 +541,7 @@
             background: linear-gradient(135deg, rgba(46,193,222,0.12), rgba(123,44,191,0.12));
             border: 1px solid rgba(46,193,222,0.3);
             border-radius: 2rem;
-            padding: 4rem;
+            padding: 3rem;
             text-align: center;
             transition: all 0.3s;
         }
@@ -535,30 +550,30 @@
             transform: scale(1.01);
         }
         .cta h3 {
-            font-size: 2rem;
-            margin-bottom: 0.8rem;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
             background: var(--gradient);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
         .cta p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--text-muted);
             margin-bottom: 0.5rem;
         }
         .cta .btn-white {
             background: var(--gradient);
             color: #0A0A0A;
-            padding: 1rem 2.5rem;
+            padding: 0.9rem 2.2rem;
             border-radius: 3rem;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.9rem;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 0.6rem;
-            margin-top: 1.5rem;
+            margin-top: 1.2rem;
             transition: all 0.3s;
         }
         .cta .btn-white:hover {
@@ -570,15 +585,15 @@
         /* فوتر */
         footer {
             text-align: center;
-            padding: 3rem;
+            padding: 2.5rem;
             border-top: 1px solid var(--border);
             color: var(--text-muted);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
         }
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
             margin-top: 1rem;
         }
@@ -592,19 +607,19 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 1.2rem;
             flex-wrap: wrap;
-            margin-top: 1.5rem;
+            margin-top: 1.2rem;
         }
         .social-links a {
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 0.9rem;
             text-decoration: none;
             transition: all 0.3s;
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1.2rem;
+            gap: 0.4rem;
+            padding: 0.4rem 1rem;
             border-radius: 2rem;
             background: rgba(46,193,222,0.1);
             border: 1px solid rgba(46,193,222,0.2);
@@ -613,37 +628,46 @@
             color: var(--cyan);
             border-color: var(--cyan);
             transform: translateY(-3px);
-            gap: 0.7rem;
+            gap: 0.6rem;
         }
 
         .copyright {
-            margin-top: 1.5rem;
-            padding-top: 1rem;
+            margin-top: 1.2rem;
+            padding-top: 0.8rem;
             border-top: 1px solid var(--border);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
         }
 
         .view-all {
             text-align: center;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        /* ========== واکنش‌گرایی ========== */
+        @media (max-width: 1100px) {
+            .grid-3 { grid-template-columns: repeat(2, 1fr); }
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
         }
 
         @media (max-width: 900px) {
-            .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
+            .hero-grid { grid-template-columns: 1fr; text-align: center; gap: 1.5rem; }
             .hero-stats { justify-content: center; }
-            .hero h1 { font-size: 2.5rem; }
+            .hero h1 { font-size: 2.2rem; }
             .section-title::after { right: 50%; transform: translateX(50%); width: 60px; }
             .section-title { text-align: center; }
             .process-steps { flex-direction: column; }
-            .logo img { height: 55px; }
+            .grid-2 { grid-template-columns: 1fr; }
         }
-        @media (max-width: 768px) {
-            .container { padding: 0 1.2rem; }
-            .header-inner { flex-direction: column; }
-            .hero-image i { font-size: 5rem; }
+
+        @media (max-width: 700px) {
+            .grid-3 { grid-template-columns: 1fr; }
+            .grid-4 { grid-template-columns: 1fr; }
+            .container { padding: 0 1rem; }
+            .logo img { height: 55px; }
+            .hero-image i { font-size: 4.5rem; }
             .products-showcase { flex-direction: column; text-align: center; }
-            .cta { padding: 2rem; }
-            .cta h3 { font-size: 1.4rem; }
+            .cta { padding: 1.8rem; }
+            .cta h3 { font-size: 1.3rem; }
         }
     </style>
 </head>
@@ -702,12 +726,12 @@
             <section class="section">
                 <h2 class="section-title fade-up">خدمات من</h2>
                 <div class="grid-3">
-                    <div class="card scale-in"><div class="card-icon"><i class="fas fa-gamepad"></i></div><h3>توسعه بازی حرفه‌ای</h3><p>طراحی و ساخت بازی‌های موبایل و کامپیوتر با گرافیک بالا، گیم‌پلی روان و بهینه‌سازی شده برای تمام پلتفرم‌ها</p></div>
-                    <div class="card scale-in"><div class="card-icon"><i class="fas fa-laptop-code"></i></div><h3>نرم‌افزار سفارشی</h3><p>توسعه پنل‌های مدیریت حرفه‌ای، داشبوردهای تحلیلی و سیستم‌های تحت وب با معماری مدرن و امنیت بالا</p></div>
-                    <div class="card scale-in"><div class="card-icon"><i class="fas fa-brain"></i></div><h3>هوش مصنوعی و چت‌بات</h3><p>ساخت چت‌بات‌های هوشمند، سیستم‌های پیشنهاددهنده و یکپارچه‌سازی مدل‌های زبانی پیشرفته در پروژه‌ها</p></div>
-                    <div class="card scale-in"><div class="card-icon"><i class="fas fa-music"></i></div><h3>اپلیکیشن پخش آهنگ</h3><p>طراحی پلیرهای حرفه‌ای موسیقی با امکانات پیشرفته مانند پخش آفلاین، لیست‌های هوشمند و یکپارچه‌سازی با سرویس‌های مختلف</p></div>
-                    <div class="card scale-in"><div class="card-icon"><i class="fas fa-video"></i></div><h3>ویرایشگر ویدیو</h3><p>توسعه ابزارهای ویرایش ویدیو با قابلیت‌های برش، ادغام، افزودن افکت، زیرنویس و خروجی با کیفیت بالا</p></div>
-                    <div class="card scale-in"><div class="card-icon"><i class="fas fa-image"></i></div><h3>ویرایشگر عکس</h3><p>ساخت اپلیکیشن‌های ویرایش عکس حرفه‌ای با فیلترهای متنوع، ابزارهای تنظیم رنگ، افکت‌های ویژه و پردازش هوشمند</p></div>
+                    <div class="card scale-in"><div class="card-icon"><i class="fas fa-gamepad"></i></div><h3>توسعه بازی حرفه‌ای</h3><p>طراحی و ساخت بازی‌های موبایل و کامپیوتر با گرافیک بالا، گیم‌پلی روان و بهینه‌سازی شده</p></div>
+                    <div class="card scale-in"><div class="card-icon"><i class="fas fa-laptop-code"></i></div><h3>نرم‌افزار سفارشی</h3><p>توسعه پنل‌های مدیریت حرفه‌ای، داشبوردهای تحلیلی و سیستم‌های تحت وب با امنیت بالا</p></div>
+                    <div class="card scale-in"><div class="card-icon"><i class="fas fa-brain"></i></div><h3>هوش مصنوعی و چت‌بات</h3><p>ساخت چت‌بات‌های هوشمند، سیستم‌های پیشنهاددهنده و یکپارچه‌سازی مدل‌های زبانی</p></div>
+                    <div class="card scale-in"><div class="card-icon"><i class="fas fa-music"></i></div><h3>اپلیکیشن پخش آهنگ</h3><p>طراحی پلیرهای حرفه‌ای موسیقی با امکانات پیشرفته و یکپارچه‌سازی با سرویس‌های مختلف</p></div>
+                    <div class="card scale-in"><div class="card-icon"><i class="fas fa-video"></i></div><h3>ویرایشگر ویدیو</h3><p>توسعه ابزارهای ویرایش ویدیو با قابلیت‌های برش، ادغام، افزودن افکت و خروجی با کیفیت بالا</p></div>
+                    <div class="card scale-in"><div class="card-icon"><i class="fas fa-image"></i></div><h3>ویرایشگر عکس</h3><p>ساخت اپلیکیشن‌های ویرایش عکس حرفه‌ای با فیلترهای متنوع و ابزارهای تنظیم رنگ</p></div>
                 </div>
             </section>
 
@@ -715,13 +739,13 @@
             <section class="section">
                 <h2 class="section-title fade-up">پروژه‌های من</h2>
                 <div class="grid-2">
-                    <div class="project-card scale-in"><i class="fas fa-th" style="font-size:2rem; color:var(--cyan); margin-bottom:1rem;"></i><h3>بازی ۲۰۴۸ حرفه‌ای</h3><p>بازی معمایی و فکری با گرافیک مدرن، انیمیشن‌های روان و گیم‌پلی اعتیادآور</p><span class="project-status status-done">✓ تکمیل شده</span></div>
-                    <div class="project-card scale-in"><i class="fas fa-comment-dots" style="font-size:2rem; color:var(--cyan); margin-bottom:1rem;"></i><h3>چت‌بات هوش مصنوعی</h3><p>سیستم پاسخگوی هوشمند با قابلیت پردازش زبان طبیعی و یادگیری از تعاملات</p><span class="project-status status-done">✓ تکمیل شده</span></div>
-                    <div class="project-card scale-in"><i class="fas fa-tachometer-alt" style="font-size:2rem; color:var(--cyan); margin-bottom:1rem;"></i><h3>سایت پنل مدیریت</h3><p>داشبورد مدیریت کامل با نمودارهای تعاملی و گزارش‌گیری پیشرفته</p><span class="project-status status-done">✓ تکمیل شده</span></div>
-                    <div class="project-card scale-in"><i class="fas fa-music" style="font-size:2rem; color:var(--cyan); margin-bottom:1rem;"></i><h3>برنامه پخش آهنگ</h3><p>پلیر حرفه‌ای موسیقی با امکانات پیشرفته و رابط کاربری زیبا</p><span class="project-status status-done">✓ تکمیل شده</span></div>
-                    <div class="project-card scale-in"><i class="fas fa-video" style="font-size:2rem; color:var(--cyan); margin-bottom:1rem;"></i><h3>ویرایشگر ویدیو</h3><p>ابزار ویرایش ویدیو با قابلیت‌های حرفه‌ای و خروجی با کیفیت بالا</p><span class="project-status status-done">✓ تکمیل شده</span></div>
-                    <div class="project-card scale-in"><i class="fas fa-image" style="font-size:2rem; color:var(--cyan); margin-bottom:1rem;"></i><h3>ویرایشگر عکس</h3><p>اپلیکیشن ویرایش عکس با فیلترهای متنوع و ابزارهای حرفه‌ای</p><span class="project-status status-done">✓ تکمیل شده</span></div>
-                    <div class="project-card scale-in"><i class="fas fa-puzzle-piece" style="font-size:2rem; color:var(--purple); margin-bottom:1rem;"></i><h3>بازی کلمه‌یار</h3><p>بازی فکری حدس کلمه با هوش مصنوعی، سطوح مختلف و بیش از ۳۰۰۰ کلمه</p><span class="project-status status-building">⚡ در حال ساخت</span></div>
+                    <div class="project-card scale-in"><i class="fas fa-th" style="font-size:1.8rem; color:var(--cyan); margin-bottom:0.8rem;"></i><h3>بازی ۲۰۴۸ حرفه‌ای</h3><p>بازی معمایی و فکری با گرافیک مدرن و گیم‌پلی اعتیادآور</p><span class="project-status status-done">✓ تکمیل شده</span></div>
+                    <div class="project-card scale-in"><i class="fas fa-comment-dots" style="font-size:1.8rem; color:var(--cyan); margin-bottom:0.8rem;"></i><h3>چت‌بات هوش مصنوعی</h3><p>سیستم پاسخگوی هوشمند با قابلیت پردازش زبان طبیعی</p><span class="project-status status-done">✓ تکمیل شده</span></div>
+                    <div class="project-card scale-in"><i class="fas fa-tachometer-alt" style="font-size:1.8rem; color:var(--cyan); margin-bottom:0.8rem;"></i><h3>سایت پنل مدیریت</h3><p>داشبورد مدیریت کامل با نمودارهای تعاملی</p><span class="project-status status-done">✓ تکمیل شده</span></div>
+                    <div class="project-card scale-in"><i class="fas fa-music" style="font-size:1.8rem; color:var(--cyan); margin-bottom:0.8rem;"></i><h3>برنامه پخش آهنگ</h3><p>پلیر حرفه‌ای موسیقی با امکانات پیشرفته</p><span class="project-status status-done">✓ تکمیل شده</span></div>
+                    <div class="project-card scale-in"><i class="fas fa-video" style="font-size:1.8rem; color:var(--cyan); margin-bottom:0.8rem;"></i><h3>ویرایشگر ویدیو</h3><p>ابزار ویرایش ویدیو با قابلیت‌های حرفه‌ای</p><span class="project-status status-done">✓ تکمیل شده</span></div>
+                    <div class="project-card scale-in"><i class="fas fa-image" style="font-size:1.8rem; color:var(--cyan); margin-bottom:0.8rem;"></i><h3>ویرایشگر عکس</h3><p>اپلیکیشن ویرایش عکس با فیلترهای متنوع</p><span class="project-status status-done">✓ تکمیل شده</span></div>
+                    <div class="project-card scale-in"><i class="fas fa-puzzle-piece" style="font-size:1.8rem; color:var(--purple); margin-bottom:0.8rem;"></i><h3>بازی کلمه‌یار</h3><p>بازی فکری حدس کلمه با هوش مصنوعی و سطوح مختلف</p><span class="project-status status-building">⚡ در حال ساخت</span></div>
                 </div>
             </section>
 
@@ -729,14 +753,14 @@
             <section class="section">
                 <h2 class="section-title fade-up">تکنولوژی‌های من</h2>
                 <div class="grid-4">
-                    <div class="skill-card scale-in"><i class="fab fa-unity"></i><h3>Unity</h3><p>توسعه بازی‌های دوبعدی و سه‌بعدی حرفه‌ای</p></div>
-                    <div class="skill-card scale-in"><i class="fab fa-python"></i><h3>Python</h3><p>هوش مصنوعی، یادگیری ماشین و بک‌اند</p></div>
-                    <div class="skill-card scale-in"><i class="fab fa-js"></i><h3>JavaScript</h3><p>توسعه وب پویا و تعاملی</p></div>
-                    <div class="skill-card scale-in"><i class="fab fa-react"></i><h3>React</h3><p>ساخت رابط‌های کاربری مدرن و سریع</p></div>
-                    <div class="skill-card scale-in"><i class="fas fa-mobile-alt"></i><h3>Flutter</h3><p>توسعه اپلیکیشن‌های چندسکویی</p></div>
-                    <div class="skill-card scale-in"><i class="fas fa-robot"></i><h3>OpenAI API</h3><p>یکپارچه‌سازی هوش مصنوعی پیشرفته</p></div>
-                    <div class="skill-card scale-in"><i class="fas fa-database"></i><h3>AI & ML</h3><p>مدل‌های زبانی و یادگیری ماشین</p></div>
-                    <div class="skill-card scale-in"><i class="fas fa-code"></i><h3>C# / C++</h3><p>برنامه‌نویسی سطح بالا و بهینه</p></div>
+                    <div class="skill-card scale-in"><i class="fab fa-unity"></i><h3>Unity</h3><p>توسعه بازی‌های حرفه‌ای</p></div>
+                    <div class="skill-card scale-in"><i class="fab fa-python"></i><h3>Python</h3><p>هوش مصنوعی و بک‌اند</p></div>
+                    <div class="skill-card scale-in"><i class="fab fa-js"></i><h3>JavaScript</h3><p>توسعه وب پویا</p></div>
+                    <div class="skill-card scale-in"><i class="fab fa-react"></i><h3>React</h3><p>رابط کاربری مدرن</p></div>
+                    <div class="skill-card scale-in"><i class="fas fa-mobile-alt"></i><h3>Flutter</h3><p>اپلیکیشن چندسکویی</p></div>
+                    <div class="skill-card scale-in"><i class="fas fa-robot"></i><h3>OpenAI API</h3><p>یکپارچه‌سازی AI</p></div>
+                    <div class="skill-card scale-in"><i class="fas fa-database"></i><h3>AI & ML</h3><p>مدل‌های زبانی</p></div>
+                    <div class="skill-card scale-in"><i class="fas fa-code"></i><h3>C# / C++</h3><p>برنامه‌نویسی سطح بالا</p></div>
                 </div>
             </section>
 
@@ -744,10 +768,10 @@
             <section class="section">
                 <h2 class="section-title fade-up">چطور با هم کار می‌کنیم؟</h2>
                 <div class="process-steps">
-                    <div class="process-step fade-up"><div class="step-number">۱</div><h3>گفتگو و ایده‌پردازی</h3><p>در این مرحله، ایده شما را با دقت گوش می‌دهم، نیازها را تحلیل می‌کنم و بهترین مسیر برای اجرای پروژه را مشخص می‌کنیم. این مرحله کاملاً رایگان است.</p></div>
-                    <div class="process-step fade-up"><div class="step-number">۲</div><h3>طراحی و برنامه‌ریزی</h3><p>ساختار پروژه طراحی می‌شود، معماری فنی مشخص می‌گردد و یک نقشه راه دقیق برای توسعه تهیه می‌شود تا همه چیز شفاف باشد.</p></div>
-                    <div class="process-step fade-up"><div class="step-number">۳</div><h3>توسعه با هوش مصنوعی</h3><p>با استفاده از قدرتمندترین ابزارهای هوش مصنوعی، کدنویسی انجام می‌شود که باعث افزایش سرعت، کاهش خطا و کیفیت بسیار بالاتر می‌گردد.</p></div>
-                    <div class="process-step fade-up"><div class="step-number">۴</div><h3>آزمایش و تحویل</h3><p>پروژه به طور کامل تست می‌شود، باگ‌ها رفع می‌گردند و در نهایت تحویل داده می‌شود. پشتیبانی ۳ ماهه نیز ارائه می‌شود.</p></div>
+                    <div class="process-step fade-up"><div class="step-number">۱</div><h3>گفتگو و ایده‌پردازی</h3><p>شنیدن ایده شما، تحلیل نیازها و مشخص کردن بهترین مسیر برای اجرای پروژه</p></div>
+                    <div class="process-step fade-up"><div class="step-number">۲</div><h3>طراحی و برنامه‌ریزی</h3><p>طراحی ساختار پروژه، معماری فنی و نقشه راه دقیق</p></div>
+                    <div class="process-step fade-up"><div class="step-number">۳</div><h3>توسعه با هوش مصنوعی</h3><p>کدنویسی با ابزارهای AI برای افزایش سرعت و کیفیت</p></div>
+                    <div class="process-step fade-up"><div class="step-number">۴</div><h3>آزمایش و تحویل</h3><p>تست کامل، رفع باگ و تحویل با پشتیبانی ۳ ماهه</p></div>
                 </div>
             </section>
 
@@ -756,24 +780,24 @@
                 <h2 class="section-title fade-up">آخرین مطالب وبلاگ</h2>
                 <div class="grid-3">
                     <div class="blog-card scale-in">
-                        <i class="fas fa-newspaper" style="font-size:2rem; color:var(--cyan); margin-bottom:1rem;"></i>
+                        <i class="fas fa-newspaper" style="font-size:1.8rem; color:var(--cyan); margin-bottom:0.8rem;"></i>
                         <h3>بهترین ابزارهای هوش مصنوعی برای توسعه بازی</h3>
                         <p>معرفی قدرتمندترین ابزارهای AI که فرآیند توسعه بازی را متحول می‌کنند...</p>
-                        <div class="blog-meta"><span><i class="far fa-calendar"></i> ۱۵ خرداد ۱۴۰۴</span><span><i class="far fa-clock"></i> ۵ دقیقه مطالعه</span></div>
+                        <div class="blog-meta"><span><i class="far fa-calendar"></i> ۱۵ خرداد ۱۴۰۴</span><span><i class="far fa-clock"></i> ۵ دقیقه</span></div>
                         <a href="#" class="read-more">ادامه مطلب ←</a>
                     </div>
                     <div class="blog-card scale-in">
-                        <i class="fas fa-code" style="font-size:2rem; color:var(--cyan); margin-bottom:1rem;"></i>
+                        <i class="fas fa-code" style="font-size:1.8rem; color:var(--cyan); margin-bottom:0.8rem;"></i>
                         <h3>چگونه با AI یک چت‌بات حرفه‌ای بسازیم؟</h3>
-                        <p>آموزش گام به گام ساخت چت‌بات هوشمند با استفاده از OpenAI API و Python...</p>
-                        <div class="blog-meta"><span><i class="far fa-calendar"></i> ۸ خرداد ۱۴۰۴</span><span><i class="far fa-clock"></i> ۸ دقیقه مطالعه</span></div>
+                        <p>آموزش گام به گام ساخت چت‌بات هوشمند با OpenAI API و Python...</p>
+                        <div class="blog-meta"><span><i class="far fa-calendar"></i> ۸ خرداد ۱۴۰۴</span><span><i class="far fa-clock"></i> ۸ دقیقه</span></div>
                         <a href="#" class="read-more">ادامه مطلب ←</a>
                     </div>
                     <div class="blog-card scale-in">
-                        <i class="fas fa-gamepad" style="font-size:2rem; color:var(--cyan); margin-bottom:1rem;"></i>
+                        <i class="fas fa-gamepad" style="font-size:1.8rem; color:var(--cyan); margin-bottom:0.8rem;"></i>
                         <h3>معرفی موتورهای بازیسازی: Unity در مقابل Unreal</h3>
                         <p>مقایسه دو موتور قدرتمند بازیسازی و راهنمای انتخاب برای پروژه شما...</p>
-                        <div class="blog-meta"><span><i class="far fa-calendar"></i> ۱ خرداد ۱۴۰۴</span><span><i class="far fa-clock"></i> ۶ دقیقه مطالعه</span></div>
+                        <div class="blog-meta"><span><i class="far fa-calendar"></i> ۱ خرداد ۱۴۰۴</span><span><i class="far fa-clock"></i> ۶ دقیقه</span></div>
                         <a href="#" class="read-more">ادامه مطلب ←</a>
                     </div>
                 </div>
@@ -787,15 +811,15 @@
                 <div class="products-showcase fade-up">
                     <div>
                         <span class="badge">🔥 جدیدترین ساخته‌های من</span>
-                        <h3 style="font-size:1.4rem;">بازی‌ها و برنامه‌های AEROOST</h3>
+                        <h3 style="font-size:1.3rem;">بازی‌ها و برنامه‌های AEROOST</h3>
                         <p>بازی‌های فکری، اپلیکیشن‌های کاربردی و ابزارهای هوشمند</p>
-                        <div style="display:flex; gap:0.5rem; margin-top:1rem; flex-wrap:wrap;">
-                            <span style="background:rgba(46,193,222,0.1); padding:0.2rem 1rem; border-radius:2rem;">🎮 ۲۰۴۸</span>
-                            <span style="background:rgba(46,193,222,0.1); padding:0.2rem 1rem; border-radius:2rem;">🎲 کلمه‌یار</span>
-                            <span style="background:rgba(46,193,222,0.1); padding:0.2rem 1rem; border-radius:2rem;">📊 پنل مدیریت</span>
-                            <span style="background:rgba(46,193,222,0.1); padding:0.2rem 1rem; border-radius:2rem;">🤖 چت‌بات</span>
-                            <span style="background:rgba(46,193,222,0.1); padding:0.2rem 1rem; border-radius:2rem;">🎵 پخش آهنگ</span>
-                            <span style="background:rgba(46,193,222,0.1); padding:0.2rem 1rem; border-radius:2rem;">🎬 ویرایشگر</span>
+                        <div style="display:flex; gap:0.5rem; margin-top:0.8rem; flex-wrap:wrap;">
+                            <span style="background:rgba(46,193,222,0.1); padding:0.2rem 0.8rem; border-radius:2rem; font-size:0.75rem;">🎮 ۲۰۴۸</span>
+                            <span style="background:rgba(46,193,222,0.1); padding:0.2rem 0.8rem; border-radius:2rem; font-size:0.75rem;">🎲 کلمه‌یار</span>
+                            <span style="background:rgba(46,193,222,0.1); padding:0.2rem 0.8rem; border-radius:2rem; font-size:0.75rem;">📊 پنل مدیریت</span>
+                            <span style="background:rgba(46,193,222,0.1); padding:0.2rem 0.8rem; border-radius:2rem; font-size:0.75rem;">🤖 چت‌بات</span>
+                            <span style="background:rgba(46,193,222,0.1); padding:0.2rem 0.8rem; border-radius:2rem; font-size:0.75rem;">🎵 پخش آهنگ</span>
+                            <span style="background:rgba(46,193,222,0.1); padding:0.2rem 0.8rem; border-radius:2rem; font-size:0.75rem;">🎬 ویرایشگر</span>
                         </div>
                     </div>
                     <i class="fas fa-cubes" style="font-size:3rem; background:var(--gradient); -webkit-background-clip:text; background-clip:text; color:transparent;"></i>
@@ -806,20 +830,20 @@
             <section class="section">
                 <h2 class="section-title fade-up">سوالات متداول</h2>
                 <div class="faq-list">
-                    <div class="faq-item"><div class="faq-question"><span>⏱️ زمان ساخت پروژه چقدر است؟</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">زمان بستگی به پیچیدگی پروژه دارد، اما معمولاً بین ۲ ماه تا ۸ ماه. با کمک AI فرآیند توسعه بسیار سریع‌تر از روش‌های سنتی است.</div></div>
-                    <div class="faq-item"><div class="faq-question"><span>💰 هزینه خدمات چقدر است؟</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">هزینه بر اساس نوع، پیچیدگی و زمان تقریبی پروژه تعیین می‌شود. برای دریافت قیمت دقیق، از طریق تلگرام با من در ارتباط باشید.</div></div>
-                    <div class="faq-item"><div class="faq-question"><span>🔧 آیا پشتیبانی بعد از تحویل دارید؟</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">بله، پس از تحویل پروژه، پشتیبانی فنی و رفع باگ‌های احتمالی به مدت ۳ ماه کاملاً رایگان ارائه می‌شود.</div></div>
-                    <div class="faq-item"><div class="faq-question"><span>💻 از چه فناوری‌هایی استفاده می‌کنید؟</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">Unity برای بازی، Python و OpenAI API برای هوش مصنوعی، Flutter برای اپلیکیشن موبایل، React برای وب و C#/C++ برای برنامه‌نویسی سطح بالا.</div></div>
-                    <div class="faq-item"><div class="faq-question"><span>📱 چه نوع پروژه‌هایی انجام می‌دهید؟</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">بازی‌های موبایل و کامپیوتر، اپلیکیشن‌های کاربردی، نرم‌افزارهای مدیریتی، چت‌بات‌های هوشمند، ویرایشگرهای ویدیو و عکس، و هر پروژه خلاقانه دیگر.</div></div>
-                    <div class="faq-item"><div class="faq-question"><span>🤝 چگونه می‌توانم با شما همکاری کنم؟</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">کافی است از طریق تلگرام با من در ارتباط باشید. ایده خود را بگویید، مشاوره اولیه رایگان است و سپس برنامه همکاری را مشخص می‌کنیم.</div></div>
+                    <div class="faq-item"><div class="faq-question"><span>⏱️ زمان ساخت پروژه چقدر است؟</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">زمان بستگی به پیچیدگی پروژه دارد، اما معمولاً بین ۲ ماه تا ۸ ماه. با کمک AI فرآیند توسعه بسیار سریع‌تر است.</div></div>
+                    <div class="faq-item"><div class="faq-question"><span>💰 هزینه خدمات چقدر است؟</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">هزینه بر اساس نوع و پیچیدگی پروژه تعیین می‌شود. برای دریافت قیمت، از طریق تلگرام با من در ارتباط باشید.</div></div>
+                    <div class="faq-item"><div class="faq-question"><span>🔧 آیا پشتیبانی دارید؟</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">بله، پس از تحویل پروژه، پشتیبانی فنی و رفع باگ به مدت ۳ ماه رایگان ارائه می‌شود.</div></div>
+                    <div class="faq-item"><div class="faq-question"><span>💻 از چه فناوری‌هایی استفاده می‌کنید؟</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">Unity، Python، JavaScript، React، Flutter، OpenAI API و C#/C++.</div></div>
+                    <div class="faq-item"><div class="faq-question"><span>📱 چه نوع پروژه‌هایی انجام می‌دهید؟</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">بازی، نرم‌افزار مدیریتی، چت‌بات، ویرایشگر ویدیو و عکس، و اپلیکیشن موبایل.</div></div>
+                    <div class="faq-item"><div class="faq-question"><span>🤝 چگونه می‌توانم با شما همکاری کنم؟</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">از طریق تلگرام با من در ارتباط باشید. مشاوره اولیه رایگان است.</div></div>
                 </div>
             </section>
 
             <!-- CTA -->
             <div class="cta fade-up">
                 <h3>آماده شروع پروژه خود هستید؟</h3>
-                <p>با هوش مصنوعی، پروژه‌ات را سریع‌تر و حرفه‌ای‌تر از همیشه بساز</p>
-                <p style="font-size:0.85rem; opacity:0.7;">مشاوره اولیه کاملاً رایگان</p>
+                <p>با هوش مصنوعی، پروژه‌ات را سریع‌تر و حرفه‌ای‌تر بساز</p>
+                <p style="font-size:0.8rem; opacity:0.7;">مشاوره اولیه کاملاً رایگان</p>
                 <a href="#" class="btn-white"><i class="fab fa-telegram"></i> شروع همکاری در تلگرام <i class="fas fa-arrow-left"></i></a>
             </div>
         </div>
