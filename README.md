@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -59,7 +58,7 @@
             color: var(--text);
         }
 
-        /* ========== انیمیشن‌های پیشرفته ========== */
+        /* ========== انیمیشن‌ها ========== */
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(50px); }
             to { opacity: 1; transform: translateY(0); }
@@ -80,10 +79,6 @@
             0% { transform: scale(1); }
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
-        }
-        @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
         }
 
         .fade-up { opacity: 0; transform: translateY(50px); transition: all 0.8s cubic-bezier(0.2,0.9,0.4,1.1); }
@@ -434,7 +429,7 @@
         .skill-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
         .skill-card p { font-size: 0.8rem; color: var(--text-muted); }
 
-        /* فرآیند کاری - متن بیشتر */
+        /* فرآیند کاری */
         .process-steps {
             display: flex;
             justify-content: space-between;
@@ -526,7 +521,7 @@
         }
         .faq-item.active .faq-question i { transform: rotate(180deg); }
 
-        /* CTA ارتقا یافته */
+        /* CTA */
         .cta {
             background: linear-gradient(135deg, rgba(46,193,222,0.12), rgba(123,44,191,0.12));
             border: 1px solid rgba(46,193,222,0.3);
@@ -572,7 +567,7 @@
             gap: 0.8rem;
         }
 
-        /* فوتر ارتقا یافته */
+        /* فوتر */
         footer {
             text-align: center;
             padding: 3rem;
@@ -626,10 +621,6 @@
             padding-top: 1rem;
             border-top: 1px solid var(--border);
             font-size: 0.75rem;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
         }
 
         .view-all {
@@ -707,7 +698,7 @@
                 </div>
             </section>
 
-            <!-- خدمات من - ارتقا یافته -->
+            <!-- خدمات من -->
             <section class="section">
                 <h2 class="section-title fade-up">خدمات من</h2>
                 <div class="grid-3">
@@ -734,7 +725,7 @@
                 </div>
             </section>
 
-            <!-- تکنولوژی‌های من - ارتقا یافته -->
+            <!-- تکنولوژی‌های من -->
             <section class="section">
                 <h2 class="section-title fade-up">تکنولوژی‌های من</h2>
                 <div class="grid-4">
@@ -749,7 +740,7 @@
                 </div>
             </section>
 
-            <!-- چطور کار می‌کنم؟ - متن بیشتر -->
+            <!-- چطور کار می‌کنم؟ -->
             <section class="section">
                 <h2 class="section-title fade-up">چطور با هم کار می‌کنیم؟</h2>
                 <div class="process-steps">
@@ -811,7 +802,7 @@
                 </div>
             </section>
 
-            <!-- سوالات متداول - ۶ سوال -->
+            <!-- سوالات متداول -->
             <section class="section">
                 <h2 class="section-title fade-up">سوالات متداول</h2>
                 <div class="faq-list">
@@ -824,7 +815,7 @@
                 </div>
             </section>
 
-            <!-- CTA ارتقا یافته -->
+            <!-- CTA -->
             <div class="cta fade-up">
                 <h3>آماده شروع پروژه خود هستید؟</h3>
                 <p>با هوش مصنوعی، پروژه‌ات را سریع‌تر و حرفه‌ای‌تر از همیشه بساز</p>
@@ -833,7 +824,7 @@
             </div>
         </div>
 
-        <!-- فوتر ارتقا یافته با سال ۲۰۲۶ -->
+        <!-- فوتر -->
         <footer>
             <div class="footer-links">
                 <a href="#">خانه</a>
@@ -851,8 +842,6 @@
             
             <div class="copyright">
                 <span>© ۲۰۲۶ AEROOST STUDIO</span>
-                <span>✨ توسعه بازی · نرم‌افزار · هوش مصنوعی ✨</span>
-                <span>🚀 با قدرت هوش مصنوعی</span>
             </div>
         </footer>
     </main>
